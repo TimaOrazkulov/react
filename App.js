@@ -4,18 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from 'react-native-elements'
 import {NewsScreen} from './components/NewsScreen'
-function NewsScreen() {
-  const style = StyleSheet.create({
-    statusbar: {
-      flexDirection: 'row',
-      backgroundColor: '09DEDF',
-      height: '80',
-    }
-  })
+function NewsScreenApp() {
   return(
-      <View style={style.statusbar}>
-
-      </View>
+    <NewsScreen />
   )
 }
 
@@ -117,7 +108,7 @@ export default function App() {
         }}
 
       >
-        <Tab.Screen name="News" component={NewsScreen} />
+        <Tab.Screen name="News" component={NewsScreenApp} />
         <Tab.Screen name="Chat" component={ChatScreen} />
         <Tab.Screen name="Profile" component={ProfileScreen} />
         <Tab.Screen name="Recycle" component={RecycleScreen} />
